@@ -1,8 +1,9 @@
 class Message:
     # Main method of the class
     def __init__(self, content, message_type):
+        self.message_types = {1: "GREETING", 2: "FORBIDDEN", 3: "OPTION"}
         assert isinstance(content, str), f"{content} is not an string"
-        assert message_type == 1 or type == 2, f"{type} is not known"
+        assert message_type in self.message_types, f"{message_type} is not known"
 
         self.__content = content
         self.__message_type = message_type
@@ -17,14 +18,14 @@ class Message:
 
     @property
     def message_type(self):
-        if self.__message_type == 1:
-            return "GREETING"
-        else:
-            return "FORBIDDEN"
+        return self.message_types[self.__message_type]
 
     @message_type.setter
     def message_type(self, value):
         self.__message_type = value
 
     def show(self):
-        return self.content
+        return print(self.content)
+
+    def __repr__(self):
+        return f"{self.message_type} | {self.content}"
