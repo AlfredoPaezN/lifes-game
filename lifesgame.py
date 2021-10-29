@@ -2,37 +2,37 @@ import os
 import time
 import copy
 
+from message import Message
+
 FPS = 2
 os.system("clear")
-greeting = "Welcome to the best game had been created in the fucking life"
-print(greeting)
+
+GREETING_MESSAGE = Message(content="Welcome to the best game had been created in the fucking life", message_type=1)
+
+# Asks the size of the board
 size = int(input("input the numbers of columns and rows you want: "))
 
-FORBBIDEN_NUMBER_MESSAGE1 = """Espera..."""
-
-FORBBIDEN_NUMBER_MESSAGE2 = """dijiste 13?"""
-
-FORBBIDEN_NUMBER_MESSAGE3 = """Aqui tiene pa que me la beses,"""
-
-FORBBIDEN_NUMBER_MESSAGE4 = """Entre mas me la beses mas me crece,"""
-
-FORBBIDEN_NUMBER_MESSAGE5 = """Busca un cura pa que me la rece, y trae un martillo pa que me la endereces,"""
-
-FORBBIDEN_NUMBER_MESSAGE6 = """Por el chiquito se te aparece toas las veces y cuando te estreses aqui te tengo este pa que te desestreses, con este tallo el jopo se te esflorece, se cumple el ciclo hasta que anochece, to los dias y toas las veces, de tanto entablar la raja del jopo se te desaparece, porque este sable no se compadece , si pides napa se te ofrece, y si repites se te agradece, no te hace rico pero tampoco te empobrece, no te hace inteligente pero tampoco te embrutece, y no    paro aqui compa que este nuevamente se endurece. JAJAJAJA
-"""
+# Messages for the forbidden number
+MESSAGE_ONE = Message(content="""Espera...""", message_type=2)
+MESSAGE_TWO = Message(content="""dijiste 13?""", message_type=2)
+MESSAGE_THREE = Message(content="""Aqui tiene pa que me la beses,""", message_type=2)
+MESSAGE_FOUR = Message(content="""Entre mas me la beses mas me crece,""", message_type=2)
+MESSAGE_FIVE = Message(content="""Busca un cura pa que me la rece, y trae un martillo pa que me la endereces,""", message_type=2)
+MESSAGE_SIX = Message(content="""Por el chiquito se te aparece toas las veces y cuando te estreses aqui te tengo este pa que te desestreses, con este tallo el jopo se te esflorece, se cumple el ciclo hasta que anochece, to los dias y toas las veces, de tanto entablar la raja del jopo se te desaparece, porque este sable no se compadece , si pides napa se te ofrece, y si repites se te agradece, no te hace rico pero tampoco te empobrece, no te hace inteligente pero tampoco te embrutece, y no    paro aqui compa que este nuevamente se endurece. JAJAJAJA
+""", message_type=2)
 
 if size == 13:
-    print(FORBBIDEN_NUMBER_MESSAGE1)
+    print(MESSAGE_ONE)
     time.sleep(1 / 0.5)
-    print(FORBBIDEN_NUMBER_MESSAGE2)
+    print(MESSAGE_TWO)
     time.sleep(1 / FPS)
-    print(FORBBIDEN_NUMBER_MESSAGE3)
+    print(MESSAGE_THREE)
     time.sleep(1 / FPS)
-    print(FORBBIDEN_NUMBER_MESSAGE4)
+    print(MESSAGE_FOUR)
     time.sleep(1 / FPS)
-    print(FORBBIDEN_NUMBER_MESSAGE5)
+    print(MESSAGE_FIVE)
     time.sleep(1 / FPS)
-    print(FORBBIDEN_NUMBER_MESSAGE6)
+    print(MESSAGE_SIX)
     time.sleep(1 / 0.5)
     time.sleep(1 / 0.5)
     input("press enter to continue: ")
