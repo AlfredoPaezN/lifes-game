@@ -47,7 +47,10 @@ class Board:
             self.board[21][18] = "*"
 
     def show(self):
+        _board = """"""
         for row in self.board:
-            row_str = " ".join(row)
+            row_str = "  ".join(row)
+            _board += row_str + "\n"
             print(row_str)
-        return self.board
+
+        return _board
